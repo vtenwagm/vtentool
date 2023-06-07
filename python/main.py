@@ -82,7 +82,7 @@ if __name__ == "__main__":
             while True:
                 keyinp = Write.Input("nhập key đã lấy => ", Colors.green_to_red, interval=0.05)
                 if keyinp == str(key) :
-                    f.write(key)
+                    f.write(str(key))
                     main()
                     break
                 else: Write.Print('key sai\n',Colors.red_to_black,interval=0.005)
