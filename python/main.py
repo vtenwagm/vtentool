@@ -71,13 +71,13 @@ def main():
 
 if __name__ == "__main__":
     banner()
-    with open('key.txt', 'a+') as f:
+    with open('key.txt', 'w+') as f:
         # print(f.read())
         key = int(uuid.getnode())*int(datetime.datetime.now().day)
         if f.read() == key: main()
         else:
             lk = requests.get(f'https://link4m.co/api-shorten/v2?api=647f57d6e7fe5f5a516b2188&url=https://google.com/search?q={key}').json()
-            print(f"link lấy key của bạn là {lk['shortenedUrl']}, key của bạn chỉ sử dụng được cho 1 thiết bị")
+            print(f"link lấy key của bạn là {lk['shortenedUrl']}, key của bạn chỉ sử dụng được cho thiết bị của bạn")
             print(key)
             while True:
                 keyinp = Write.Input("nhập key đã lấy => ", Colors.green_to_red, interval=0.05)
