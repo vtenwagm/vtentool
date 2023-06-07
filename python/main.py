@@ -39,23 +39,22 @@ def banner1():
     ║══════════════════════════════║
     ║  [1] TDS facebook auto       ║
     ║  [2] TDS tiktok              ║
-    ║  [3] TDS youtube             ║
     ╚══════════════════════════════╝
 
     ╔══════════════════════════════╗
     ║          [Tool TTC]          ║
     ║══════════════════════════════║
-    ║  [4] TTC facebook auto       ║
-    ║  [5] TTC tiktok              ║
-    ║  [6] TTC youtube             ║
+    ║  [3] TTC facebook auto       ║
+    ║  [4] TTC tiktok              ║
+    ║  [5] TTC youtube             ║
     ╚══════════════════════════════╝
 
     ╔══════════════════════════════╗
     ║       [Tool tiện ích]        ║
     ║══════════════════════════════║
-    ║  [7] Reg page pro5           ║
-    ║  [8] Share ảo                ║
-    ║  [9] Reg clone garena        ║
+    ║  [6] Reg page pro5           ║
+    ║  [7] Share ảo                ║
+    ║  [8] Reg clone garena        ║
     ╚══════════════════════════════╝
 
     [X] Thoát
@@ -69,6 +68,7 @@ def main():
     cmd = Write.Input("nhập lựa chọn => ", Colors.green_to_cyan, interval=0.05)
     if cmd == '1': exec(requests.get('https://raw.githubusercontent.com/vtenwagm/vtentool/main/python/tdsfb.py').text)
     if cmd == '2': exec(requests.get('https://raw.githubusercontent.com/vtenwagm/vtentool/main/python/tdstk.py').text)
+     
 
 if __name__ == "__main__":
     try : open('key.txt', 'r')
