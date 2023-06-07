@@ -70,19 +70,20 @@ def main():
     if cmd == '1': exec(requests.get('url').text)
 
 if __name__ == "__main__":
-    banner()
-    with open('key.txt', 'w+') as f:
+    try : open('key.txt', 'r')
+    except : open('key.txt','a')
+    with open('key.txt', 'r') as f:
         # print(f.read())
         key = int(uuid.getnode())*int(datetime.datetime.now().day)
-        if f.read() == key: main()
+        if f.read() == str(key): main()
         else:
+            banner()
             lk = requests.get(f'https://link4m.co/api-shorten/v2?api=647f57d6e7fe5f5a516b2188&url=https://google.com/search?q={key}').json()
-            print(f"link lấy key của bạn là {lk['shortenedUrl']}, key của bạn chỉ sử dụng được cho thiết bị của bạn")
-            print(key)
+            print(f"link lấy key của bạn là {lk['shortenedUrl']}, key của bạn chỉ sử dụng được cho 1 thiết bị")
             while True:
                 keyinp = Write.Input("nhập key đã lấy => ", Colors.green_to_red, interval=0.05)
                 if keyinp == str(key) :
-                    f.write(str(key))
+                    open("key.txt","w").write(str(key))
                     main()
                     break
                 else: Write.Print('key sai\n',Colors.red_to_black,interval=0.005)
