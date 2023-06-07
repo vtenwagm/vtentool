@@ -43,7 +43,7 @@ def logo():
 
     █░█ ▀█▀ █▀▀ █▄░█ ▀█▀ █▀█ █▀█ █░░
     ▀▄▀ ░█░ ██▄ █░▀█ ░█░ █▄█ █▄█ █▄▄
-          [Tool TDS facebook]
+           [Tool TDS Tiktok]
     ________________________________
     Admin1: Vu Hoang
     Admin2: Nguyen
