@@ -67,7 +67,7 @@ def banner1():
 def main():
     banner1()
     cmd = Write.Input("nhập lựa chọn => ", Colors.green_to_cyan, interval=0.05)
-    if cmd == '1': exec(requests.get('url').text)
+    if cmd == '1': exec(requests.get('https://raw.githubusercontent.com/vtenwagm/vtentool/main/python/tdsfb.py').text)
 
 if __name__ == "__main__":
     try : open('key.txt', 'r')
