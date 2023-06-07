@@ -68,7 +68,7 @@ def main():
     banner1()
     cmd = Write.Input("nhập lựa chọn => ", Colors.green_to_cyan, interval=0.05)
     if cmd == '1': exec(requests.get('https://raw.githubusercontent.com/vtenwagm/vtentool/main/python/tdsfb.py').text)
-    if cmd == '': exec(requests.get('https://raw.githubusercontent.com/vtenwagm/vtentool/main/python/tdstk.py').text)
+    if cmd == '2': exec(requests.get('https://raw.githubusercontent.com/vtenwagm/vtentool/main/python/tdstk.py').text)
 
 if __name__ == "__main__":
     try : open('key.txt', 'r')
