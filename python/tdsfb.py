@@ -14,8 +14,9 @@ pink='\033[1;95m'
 redb='\033[7;37m\033[1;91m'
 redz='\033[1;41;97m'
 end='\033[0m'
-fivex=white+'['+red+'VTEN'+green+']'
-fivex_no_pro=green+'[VTEN]'+end
+fivex=green+'['+red+'FIVEX'+green+']'
+fivex_no_pro=green+'[FIVEX]'+end
+hln=green+"["+red+"HOÀNG LONG NGŨ"+green+"]"
 def fivex_delay(o):
 	while (o>1):
 		o=o-1
@@ -25,13 +26,14 @@ def fivex_delay(o):
 		sleep(0.1)
 		print(green+'[VT'+red+'E'+green+'N]'+'['+green+str(o)+']','      ', end='\r')
 		sleep(0.1)
+		print(green+'[VT'+red+'E'+green+'N]'+'['+green+str(o)+']','      ', end='\r')
+		sleep(0.1)
 		print(green+'[VTE'+red+'N]'+green+'['+green+str(o)+']','      ', end='\r')
 		sleep(0.1)
 		print(green+'[VTEN'+red+']'+green+'['+green+str(o)+']','      ', end='\r')
 		sleep(0.1)
 		print(green+'[VTEN]'+red+'['+green+str(o)+']','      ', end='\r')
 		sleep(0.1)
-		print(green+'['+red+'VTEN'+green+']'+'['+red+str(o)+green+']','      ', end='\r')
 		sleep(0.1)
 def logo():
     os.system("cls" if os.name == "nt" else "clear")
@@ -39,19 +41,18 @@ def logo():
 
     █░█ ▀█▀ █▀▀ █▄░█ ▀█▀ █▀█ █▀█ █░░
     ▀▄▀ ░█░ ██▄ █░▀█ ░█░ █▄█ █▄█ █▄▄
-          [Tool TDS facebook]
+           [Tool TDS Tiktok]
     ________________________________
     Admin1: Vu Hoang
     Admin2: Nguyen
     ________________________________
-
     """
 
     Write.Print(logo,Colors.red_to_green,interval=0.005)
 
 logo()
 while(True):
-	token_tds=input(yellow+'NHẬP'+red+' ACCESS_TOKEN TDS: '+green)
+	token_tds=input(green+'NHẬP'+red+' ACCESS_TOKEN TDS: '+green)
 	ttacc=requests.get('https://traodoisub.com/api/?fields=profile&access_token='+str(token_tds))
 	if 'error' in ttacc.text:print(red+ttacc.json()['error'].upper())
 	if 'success' in ttacc.text:
@@ -66,7 +67,7 @@ logo()
 while(True):
 	while(True):
 		while(True):
-			ck_fb=input(yellow+'NHẬP'+green+' COOKIE FACEBOOK: '+red)
+			ck_fb=input(red+'NHẬP'+green+' COOKIE FACEBOOK: '+red)
 			if ck_fb=='':break
 			cookie=ck_fb.split(';')
 			for o in range(0,len(cookie)):
@@ -146,7 +147,7 @@ while(True):
 					if s==stop:break
 					fivex_delay(delay)
 			except:
-				print(fivex_no_pro+green+'['+red+'Dừng tool!'+green+']','               ',end='\r')
+				print(fivex_no_pro+green+'['+red+'LỖI!!!'+green+']','               ',end='\r')
 		if s==stop:break
 		if 'Trước tiên, bạn phải đăng nhập.' in check:
 			print(fivex_no_pro+green+'['+red+'COOKIE FACEBOOK DIE'+green+']','                    ')
