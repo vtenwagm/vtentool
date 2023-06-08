@@ -69,18 +69,25 @@ def tiktok_like():
                 requests.get(f'https://traodoisub.com/api/coin/?type=tiktok_like&id={nv["id"]}&access_token={token}')
 
             nvs = requests.get(f"https://traodoisub.com/api/?fields=tiktok_like&access_token={token}").json()
+            try:
+                s = requests.get(f'https://traodoisub.com/api/coin/?type=TIKTOK_FOLLOW&id=TIKTOK_FOLLOW_API&access_token={token}').json()
+                xu = s['data']['xu']
+                xu_them = s['data']['xu_them']
+                msg = s['data']['msg']
+                print(fivex_no_pro+green+'['+time+']['+yellow+msg+green+']['+yellow+xu+green+']','     ')
+            except: pass
             for nv in nvs['data']:
                 print(fivex_no_pro+green+'['+time+']['+yellow+'LIKE'+green+']['+yellow+nv["link"]+green+']','     ')
                 open_browser(nv['link'])
                 vten_delay(delay)
                 requests.get(f'https://traodoisub.com/api/coin/?type=tiktok_like&id={nv["id"]}&access_token={token}')
-
-            
-            s = requests.get(f'https://traodoisub.com/api/coin/?type=TIKTOK_LIKEW&id=TIKTOK_LIKE_API&access_token={token}').json()
-            xu = s['data']['xu']
-            xu_them = s['data']['xu_them']
-            msg = s['data']['msg']
-            print(fivex_no_pro+green+'['+time+']['+yellow+msg+green+']['+yellow+xu+green+']','     ')
+            try:
+                s = requests.get(f'https://traodoisub.com/api/coin/?type=TIKTOK_FOLLOW&id=TIKTOK_FOLLOW_API&access_token={token}').json()
+                xu = s['data']['xu']
+                xu_them = s['data']['xu_them']
+                msg = s['data']['msg']
+                print(fivex_no_pro+green+'['+time+']['+yellow+msg+green+']['+yellow+xu+green+']','     ')
+            except: pass
         except: pass
 
 
@@ -94,6 +101,13 @@ def tiktok_fl():
                 open_browser(nv['link'])
                 vten_delay(delay)
                 requests.get(f'https://traodoisub.com/api/coin/?type=tiktok_follow&id={nv["id"]}&access_token={token}')
+            try:
+                s = requests.get(f'https://traodoisub.com/api/coin/?type=TIKTOK_FOLLOW&id=TIKTOK_FOLLOW_API&access_token={token}').json()
+                xu = s['data']['xu']
+                xu_them = s['data']['xu_them']
+                msg = s['data']['msg']
+                print(fivex_no_pro+green+'['+time+']['+yellow+msg+green+']['+yellow+xu+green+']','     ')
+            except: pass
 
             nvs = requests.get(f"https://traodoisub.com/api/?fields=tiktok_follow&access_token={token}").json()
             for nv in nvs['data']:
@@ -101,11 +115,14 @@ def tiktok_fl():
                 open_browser(nv['link'])
                 vten_delay(delay)
                 requests.get(f'https://traodoisub.com/api/coin/?type=tiktok_follow&id={nv["id"]}&access_token={token}')
-            s = requests.get(f'https://traodoisub.com/api/coin/?type=TIKTOK_FOLLOW&id=TIKTOK_FOLLOW_API&access_token={token}').json()
-            xu = s['data']['xu']
-            xu_them = s['data']['xu_them']
-            msg = s['data']['msg']
-            print(fivex_no_pro+green+'['+time+']['+yellow+msg+green+']['+yellow+xu+green+']','     ')
+            try:
+                s = requests.get(f'https://traodoisub.com/api/coin/?type=TIKTOK_FOLLOW&id=TIKTOK_FOLLOW_API&access_token={token}').json()
+                xu = s['data']['xu']
+                xu_them = s['data']['xu_them']
+                msg = s['data']['msg']
+                print(fivex_no_pro+green+'['+time+']['+yellow+msg+green+']['+yellow+xu+green+']','     ')
+            except: pass
+
         except: pass
 
 
