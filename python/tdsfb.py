@@ -14,8 +14,8 @@ pink='\033[1;95m'
 redb='\033[7;37m\033[1;91m'
 redz='\033[1;41;97m'
 end='\033[0m'
-fivex=green+'['+red+'FIVEX'+green+']'
-fivex_no_pro=green+'[FIVEX]'+end
+fivex=green+'['+red+'VTEN'+green+']'
+fivex_no_pro=green+'[VTEN]'+end
 hln=green+"["+red+"HOÀNG LONG NGŨ"+green+"]"
 def fivex_delay(o):
 	while (o>1):
@@ -41,7 +41,7 @@ def logo():
 
     █░█ ▀█▀ █▀▀ █▄░█ ▀█▀ █▀█ █▀█ █░░
     ▀▄▀ ░█░ ██▄ █░▀█ ░█░ █▄█ █▄█ █▄▄
-           [Tool TDS Tiktok]
+          [Tool TDS Facebook]
     ________________________________
     Admin1: Vu Hoang
     Admin2: Nguyen
